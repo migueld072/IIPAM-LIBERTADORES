@@ -72,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Jogadores\ListagemJogadorView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Partidas\TabelaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

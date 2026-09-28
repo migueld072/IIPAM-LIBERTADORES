@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppLibertadoresHAS.Views.Jogadores.ListagemJogadorView"
+             Title="ListagemJogadorView">
+    <ScrollView>
+        <VerticalStackLayout Padding="10,0,0,0">
+            <CollectionView x:Name="listView" ItemsSource="{Binding Jogadores}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="5" Padding="10" BackgroundColor="LightGray">
+                            <VerticalStackLayout Spacing="6">
+                                <Label FontSize="18" FontAttributes="Bold"
+                                       Text="{Binding Nome}" />
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <Label Grid.Column="0" FontSize="14"
+                                           Text="{Binding Posicao.Nome}" />
+                                    <Label Grid.Column="1" FontSize="14" FontAttributes="Bold"
+                                           Text="{Binding Numero, StringFormat='#{0}'}" />
+                                </Grid>
+                                <Label FontSize="14"
+                                       Text="{Binding Time.Nome}" />
+                                <Label FontSize="12" TextColor="DarkSlateGray"
+                                       Text="{Binding DataNascimento, StringFormat='Nascimento: {0:dd/MM/yyyy}'}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

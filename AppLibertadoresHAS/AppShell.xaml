@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AppLibertadoresHAS"
     xmlns:partidas="clr-namespace:AppLibertadoresHAS.Views.Partidas"
+    xmlns:jogadores="clr-namespace:AppLibertadoresHAS.Views.Jogadores"
     Title="AppLibertadoresHAS">
 
     <ShellContent
@@ -13,7 +14,11 @@
 
     <ShellContent
         Title="Partidas" 
-        ContentTemplate="{DataTemplate partidas:TabelaView}" Route="tabela" />    
+        ContentTemplate="{DataTemplate partidas:TabelaView}" Route="tabela" />
+
+    <ShellContent
+        Title="Jogadores"
+        ContentTemplate="{DataTemplate jogadores:ListagemJogadorView}" Route="listagemJogador" />
 </Shell>
 
     
